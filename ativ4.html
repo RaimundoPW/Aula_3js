@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <form>
+        <label>Nota1</label>
+        <input type="number" id="nota1"><br>
+        <label>Nota2</label>
+        <input type="number" id="nota2">
+    </form>
+
+    <button onclick="calcular()">calcular</button>
+    <p id="resultado"></p>
+</body>
+<script>
+    function calcular(){
+        let nota1 = Number(document.getElementById("nota1").value);
+        let nota2 = Number(document.getElementById("nota2").value);
+        let resultado = document.getElementById("resultado");
+
+        let media = (nota1 + nota2 )/2;
+
+        if (media >= 7){
+            resultado.innerHTML = "Sua media é: "+media.toFixed(2)+" Aprovado";
+        }
+        else if((media >= 5 ) && (media < 7)){
+            resultado.innerHTML = "Sua media é: "+media.toFixed(2)+" Voçê ficou de recuperaçâo";
+        }
+        else {
+            resultado.innerHTML = "Sua media é: "+media.toFixed(2)+" Voçê foi reprovado";
+        }    
+  
+    }
+</script>
+</html>
