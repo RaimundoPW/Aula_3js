@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano_bisexto</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        function calcular(){
+            let ano = Number (document.getElementById("ano").value);
+            if(ano % 100 == 0){
+                alert("Não é bissexto");
+            }
+            else if ( ano % 400 == 0){
+                alert("Bissexto");
+            }
+            
+        } 
+    </script>
+</html>
