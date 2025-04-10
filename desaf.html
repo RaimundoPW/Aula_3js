@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CALCULADORA</title>
+    <title>Calculo de Frete</title>
 </head>
 <body>
     <form >
-        <label>distancia</label>
+        <label>distancia em KM:</label>
         <input type="number" id="distancia">
 
     </form>
@@ -18,18 +18,16 @@
 <script>
     function calcular(){
         let distancia = Number(document.getElementById("distancia").value);
-        let resultado = document.getElementById("resultado");
-        let reais;
+        let frete = 0;
+       
 
         if (distancia <=100 ){
-            reais = distancia * 1.20;
-            resultado.innerHTML = "Valor do km rodado = "+ reais;
-    }
-        else if(distancia > 100){
-            reais = distancia * 1.50;
-            resultado.innerHTML = "Valor do km rodado ="+ reais;
+            frete = distancia * 1.5;
         }
-
+        else{
+            frete = distancia * 1.2;
+        }
+        document.getElementById("resultado").innerHTML = "O valor do Frete é R$" +frete;
     }
 </script>
 </html>
