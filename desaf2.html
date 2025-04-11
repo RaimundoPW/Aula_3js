@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laços de repetição</title>
+</head>
+<body>
+    <h2>while</h2>
+    <p id="while"></p>
+    
+    <h2>For</h2>
+    <p id="for"></p>
+</body>
+<script>
+    //Laço While
+   let contador = 1;
+    let text = "";
+
+    while(contador <= 200){
+        //alert("volta"+contador);
+        text = text + "O numero é:" +contador+"<br>"
+        contador++;
+    }
+    document.getElementById("while").innerHTML = text;
+    
+    
+
+
+
+    //Laço For
+    let cont = 1;
+    let texto = "";
+
+    for(let cont=1; cont<=100; cont++){
+        texto = texto + "O numero é:" +cont+"<br>"
+        cont++;
+    }
+
+    document.getElementById("for").innerHTML = texto;
+
+</script>
+</html>
